@@ -1,0 +1,80 @@
+/* Cambiar el fondo de color al amarillo #EAC926 */
+body {
+  background-color: #eac926;
+}
+nav ul {
+  list-style-type: none; /* Elimina los puntos de las listas */
+  padding: 0; /* Elimina el relleno predeterminado de la lista */
+}
+
+nav ul li {
+  display: flex; /* Aplica flexbox para alinear elementos en fila */
+  align-items: center; /* Alinea verticalmente los elementos al centro */
+}
+
+nav ul li i {
+  order: 2; /* Cambia el orden para que el ícono esté a la derecha */
+}
+
+nav ul li a {
+  text-decoration: none; /* Elimina la decoración de los enlaces (subrayado) */
+}
+nav ul li a {
+  color: black;
+}
+nav ul li.subtitle {
+  display: flex;
+  align-items: center;
+  color: black;
+  margin-top: 10px;
+  text-align: center; /* Centra el texto horizontalmente */
+}
+.burger-menu {
+  text-align: center;
+  padding: 10px; /* espacio alrededor del icono para hacerlo más visible*/
+}
+
+.burger-menu i {
+  background-color: #03264c;
+  color: white; /* Cambia el color del icono a blanco */
+  padding: 5px;
+  border-radius: 10%;
+  font-size: 24px;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+section {
+  width: 100%;
+  max-width: 320px; /* Tamaño específico para iPhone SE */
+  margin: 0 auto;
+}
+
+section article {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section article img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+footer {
+  background-color: #fff; /* Fondo blanco */
+  color: #000; /* Texto en color negro */
+  padding: 20px;
+  text-align: center; /* Centrar el contenido */
+}
+footer section i {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #03264c;
+  margin: 0 auto 3px;
+}
