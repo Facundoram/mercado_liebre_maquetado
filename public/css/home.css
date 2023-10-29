@@ -1,0 +1,16 @@
+img {
+  width: 50%;
+  height: 50%;
+}
+
+.banner {
+  width: 100%;
+  margin: 0 auto;
+}
+
+main h3 {
+  font-family: var(--Titulares);
+}
+main p {
+  font-family: var(--Precios);
+}

@@ -1,0 +1,23 @@
+footer section {
+  text-align: center;
+  padding: 20px;
+  font-familyc: "Roboto";
+  max-width: 365x;
+}
+footer .fas {
+  padding: 30px;
+  color: var(--Celeste);
+  box-sizing: border-box;
+}
+footer h3 {
+  font-size: var(--Precios);
+  color: var(--Azul);
+}
+footer p {
+  font-size: var(--Descripcion);
+  color: var(--gris-oscuro);
+}
+.copyrigth {
+  padding-top: 30px;
+  text-align: center;
+}
