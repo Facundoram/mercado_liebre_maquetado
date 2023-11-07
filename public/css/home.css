@@ -1,3 +1,20 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+main section article i {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+}
 img {
   width: 50%;
   height: 50%;
@@ -26,6 +43,14 @@ main article {
 .home__main__section {
   width: 100%;
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+  justify-content: space-between; /* Espaciado uniforme entre los elementos */
+}
+
+/* Aseguro de que el título no ocupe espacio adicional */
+.home__main__section h2 {
+  flex: 0 0 100%; /* El título no ocupará espacio y tendrá un ancho del 100% */
 }
 
 .home__main__section__article img {
