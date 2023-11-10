@@ -6,113 +6,257 @@ body {
 header {
   background-color: var(--Amarillo);
   font-family: "Roboto";
+  width: 100%;
+  padding: 30px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center; /* Centra horizontalmente los elementos en el encabezado */
 }
 
-/* Logo y barra de búsqueda */
-
-.buscar__header {
-  position: absolute;
-
+/* ---------------------------- LOGO ----------------------- */
+header .logo {
   display: flex;
-  // flex-wrap: wrap;
-
-  padding-right: 20px;
-  padding-top: 30px;
-  padding-left: 0px;
-  height: 4em;
-  border: 0.02 5px solid #fff;
-  border-radius: 30px;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 5px;
+  left: 20px;
 }
-
+header .logo img {
+  width: 100px;
+  height: 30px;
+}
+/* ---------------------------- NAV ----------------------- */
+header .nav_ {
+  display: flex;
+  width: 50%;
+  height: 50%;
+  position: relative;
+  top: 5px;
+  right: 20px;
+}
 .buscar__header input[type="text"] {
-  // flex: 1;
-  margin-left: 20px;
-
-  padding: 0 20px 0 0;
+  width: 100%;
+  height: 80%;
+  position: relative;
+  top: -5px;
+  right: -10px;
+  padding: 0 25px 0 0;
   color: var(--gris-claro);
   font-size: 14px;
-  text-align: left;
+  text-align: center;
   box-sizing: border-box;
-  border: 30px;
+  border: 1px;
   color: aliceblue;
   box-sizing: border-box;
-  max-width: 140px;
-  border-right: 20px;
   border-radius: 3px;
-  position: relative;
-
-  //background: transparent; /* Hace que el input sea transparente */
 }
-
 .icon-container i.fas.fa-search {
-  padding: 5px;
-  background-color: #fff;
-  color: var(--gris-oscuro);
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: none; /* Quita el borde del ícono */
+  position: relative;
+  top: -35px;
+  right: -75px;
+  padding: 5px;
+  color: var(--gris-oscuro);
+  height: 100%;
+  border: none;
 }
-
-/* Estilo para el logo */
-
-.logo {
-  padding-left: 40px;
-  padding-top: 10px;
-  width: 50%;
-  height: 10em;
-  box-sizing: border-box;
+/* ---------------------------- SUBTITULO ----------------------- */
+.subtitle {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--azul);
+  font-size: var(--cuerpo-texto);
 }
-.user__options li {
-  order: 1;
-  margin-right: 5px;
-  //display: flex;
-  //align-items: center;
+.subtitle p {
+  position: relative;
+  top: -15px;
 }
-.user__options i {
-  order: 1;
-  margin-right: 5px;
-}
-// ------------------ texto ---------------------------
-.text__nav {
-  margin: 0; /* Agregar margen cero para eliminar cualquier desplazamiento lateral */
-}
-
+/* ---------------------------- MENU BURGUER ----------------------- */
 .burger-menu {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px;
   color: var(--gris-claro);
   box-sizing: border-box;
   position: absolute;
-  margin-top: 80px;
+  top: 100px;
 }
-
 .burger-menu i {
   padding: 5px;
   background-color: var(--Azul);
   border: 3px;
   border-radius: 3px;
 }
-.subtitle {
-  text-align: center;
-  margin-top: 30px;
-  color: var(--azul);
-  font-size: var(--cuerpo-texto);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateX(-40%);
+
+/* Para ----------------- TABLET'S ----------------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea si no caben en el ancho disponible */
+    justify-content: space-between; /* Alinea los elementos horizontalmente y coloca espacio entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 50px;
+  }
+  header .logo img {
+    position: absolute;
+    left: -45px;
+    top: -30px;
+    width: 250px;
+    height: 60px;
+  }
+  .subtitle p {
+    width: 100%;
+    position: relative;
+    top: 1px;
+    right: 20px;
+  }
+  .logo,
+  .buscar__header,
+  .subtitle {
+    flex: 1; /* Distribuye el espacio disponible entre los tres elementos */
+    text-align: center; /* Centra el contenido en cada elemento */
+    width: 33.33%; /* Divide el ancho en tres partes iguales para los tres elementos principales */
+  }
+  .user__options,
+  .text__nav {
+    display: flex; /* Alinea las opciones en una fila en la parte inferior */
+    justify-content: space-between; /* Espacio entre las opciones en la fila */
+    align-items: center; /* Centra las opciones verticalmente */
+    width: 50%; /* Ocupa el ancho completo del encabezado */
+    position: relative;
+    top: 40px;
+    list-style-type: none;
+  }
+  .text__nav a {
+    font-size: 14px;
+    position: relative;
+    left: -25px;
+    padding: 0px 20px;
+    text-decoration: none;
+    color: black;
+  }
+  .user__options li {
+    font-size: 14px;
+    position: relative;
+    padding: 0px 20px;
+    right: -25px;
+  }
+  .user__options li a {
+    text-decoration: none;
+    color: black;
+  }
+  .buscar__header input[type="text"] {
+    width: 50%;
+    height: 70%;
+    position: relative;
+    top: 5px;
+    padding: 0 25px 0 0;
+    color: var(--gris-claro);
+    font-size: 14px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px;
+    color: aliceblue;
+    box-sizing: border-box;
+    border-radius: 3px;
+  }
+  .icon-container i.fas.fa-search {
+    width: 23px;
+    height: 23px;
+    position: relative;
+    top: -20px;
+    right: -17em;
+    padding: 5px;
+    color: var(--gris-oscuro);
+    border: 1px solid black;
+    background-color: var(--gris-claro);
+    cursor: pointer;
+  }
 }
 
-.subtitle p {
-  margin: 0;
-}
+/* Para ----------------- DESKTOPS ----------------------------- */
+@media (min-width: 1024px) {
+  @media (min-width: 1024px) {
+    header {
+      display: flex;
+      flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea si no caben en el ancho disponible */
+      justify-content: space-between; /* Alinea los elementos horizontalmente y coloca espacio entre ellos */
+      align-items: center; /* Centra los elementos verticalmente */
+      padding: 50px;
+    }
 
-.user__options,
-.text__nav {
+    header .logo img {
+      width: 250px;
+      height: 60px;
+    }
+
+    .logo,
+    .buscar__header,
+    .subtitle {
+      flex: 1; /* Distribuye el espacio disponible entre los tres elementos */
+      text-align: center; /* Centra el contenido en cada elemento */
+      width: 33.33%; /* Divide el ancho en tres partes iguales para los tres elementos principales */
+    }
+
+    .user__options,
+    .text__nav {
+      display: flex; /* Alinea las opciones en una fila en la parte inferior */
+      justify-content: space-between; /* Espacio entre las opciones en la fila */
+      align-items: center; /* Centra las opciones verticalmente */
+      width: 50%; /* Ocupa el ancho completo del encabezado */
+      position: relative;
+      top: 40px;
+      list-style-type: none;
+      //margin-bottom: 5px 0px;
+    }
+    .text__nav a {
+      font-size: 14px;
+      position: relative;
+      left: -25px;
+      padding: 0px 24px;
+      text-decoration: none;
+      color: black;
+    }
+    .user__options li {
+      font-size: 14px;
+      position: relative;
+      padding: 0px 40px;
+      right: -25px;
+    }
+    .user__options li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .buscar__header input[type="text"] {
+      width: 50%;
+      height: 70%;
+      position: relative;
+      top: 5px;
+      padding: 0 25px 0 0;
+      color: var(--gris-claro);
+      font-size: 14px;
+      text-align: center;
+      box-sizing: border-box;
+      border: 1px;
+      color: aliceblue;
+      box-sizing: border-box;
+      border-radius: 3px;
+    }
+    .icon-container i.fas.fa-search {
+      width: 23px;
+      height: 23px;
+      position: relative;
+      top: -20px;
+      right: -26em;
+      padding: 5px;
+      color: var(--gris-oscuro);
+      border: 1px solid black;
+      background-color: var(--gris-claro);
+      cursor: pointer;
+    }
+  }
 }

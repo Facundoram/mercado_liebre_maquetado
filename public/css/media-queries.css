@@ -15,7 +15,7 @@
 
 /* PARA TABLETS*/
 
-@media (min-width: 769px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .item-box p {
     display: flex;
   }
@@ -36,6 +36,9 @@
     flex-basis: calc(
       50% - 10px
     ); /* Ocupa el 50% del ancho disponible con un margen de 10px */
+  }
+  .burger-menu {
+    display: none;
   }
 }
 
@@ -65,37 +68,5 @@
     flex-basis: calc(
       25% - 10px
     ); /* Ocupa el 25% del ancho disponible con un margen de 10px */
-  }
-}
-
-/* Para TABLETS y DESKTOPS */
-@media (min-width: 769px) {
-  @media (min-width: 769px) {
-    header {
-      display: flex;
-      flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea si no caben en el ancho disponible */
-      justify-content: space-between; /* Alinea los elementos horizontalmente y coloca espacio entre ellos */
-      align-items: center; /* Centra los elementos verticalmente */
-    }
-
-    .logo,
-    .buscar__header,
-    .subtitle {
-      flex: 1; /* Distribuye el espacio disponible entre los tres elementos */
-      text-align: center; /* Centra el contenido en cada elemento */
-      width: 33.33%; /* Divide el ancho en tres partes iguales para los tres elementos principales */
-    }
-
-    .user__options,
-    .text__nav {
-      display: flex; /* Alinea las opciones en una fila en la parte inferior */
-      justify-content: space-between; /* Espacio entre las opciones en la fila */
-      align-items: center; /* Centra las opciones verticalmente */
-      width: 100%; /* Ocupa el ancho completo del encabezado */
-    }
-
-    .burger-menu {
-      display: none; /* Oculta el menú de hamburguesa en la vista de tablet y desktop */
-    }
   }
 }
