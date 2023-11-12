@@ -1,0 +1,39 @@
+.login__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--gris-claro);
+}
+.login__section {
+  width: 90%;
+  margin: 50px auto;
+  background-color: #ffff;
+  box-shadow: 0px 0px 10px var(--gris-oscuro);
+  border-radius: 8px;
+  padding: 20px;
+}
+.login__section label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.campo {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.btn-enviar {
+  background-color: var(--Azul);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background-color: var(--Celeste);
+}
