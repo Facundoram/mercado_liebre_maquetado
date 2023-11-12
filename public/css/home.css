@@ -3,6 +3,12 @@
   padding: 0px;
   box-sizing: border-box;
 }
+body {
+  margin: 0;
+}
+main {
+  max-width: 100%;
+}
 main section article i {
   display: block;
   font-size: 16px;
@@ -46,6 +52,20 @@ main article {
   display: flex;
   flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
   justify-content: space-between; /* Espaciado uniforme entre los elementos */
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: var(--gris-claro);
+  border: 1px solid #ebebeb;
+  border-bottom: 0px;
+  box-sizing: border-box;
+}
+
+.home__main__section__article {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Aseguro de que el título no ocupe espacio adicional */
@@ -60,6 +80,7 @@ main article {
   border-top: 1px solid #ebebeb;
   padding: 15px;
 }
+
 .home__main__section__article .item-box p.off {
   color: var(--Verde);
   margin-bottom: 20px;
@@ -67,4 +88,34 @@ main article {
 
 .home__main__section__article .item-box i.fas.fa-shipping-fast {
   color: var(--Verde);
+}
+
+.home__main__section h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.home__main__section .article-box {
+  position: relative;
+  background-color: white;
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  margin: 5px;
+}
+.home__main__section__article .item-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mostrar 2 artículos en tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home__main__section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .home__main__section__article {
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }

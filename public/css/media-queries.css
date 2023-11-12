@@ -15,7 +15,7 @@
 
 /* PARA TABLETS*/
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .item-box p {
     display: flex;
   }
@@ -30,12 +30,6 @@
   }
   footer .fas {
     font-size: 28px; /* Aumenta el tamaño de los íconos para tablets */
-  }
-  /* Mostrar 2 artículos en tablets */
-  .home__main__section .home__main__section__article {
-    flex-basis: calc(
-      50% - 10px
-    ); /* Ocupa el 50% del ancho disponible con un margen de 10px */
   }
   .burger-menu {
     display: none;
