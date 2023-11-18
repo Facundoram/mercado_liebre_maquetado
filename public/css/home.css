@@ -68,6 +68,12 @@ main article {
   text-align: center;
 }
 
+.home__main__section__article .article-box .item-box h4 {
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+}
+
 /* Aseguro de que el título no ocupe espacio adicional */
 .home__main__section h2 {
   flex: 0 0 100%; /* El título no ocupará espacio y tendrá un ancho del 100% */
@@ -88,6 +94,7 @@ main article {
 
 .home__main__section__article .item-box i.fas.fa-shipping-fast {
   color: var(--Verde);
+  transition: all 2s;
 }
 
 .home__main__section h2 {
@@ -97,12 +104,14 @@ main article {
 .home__main__section .article-box {
   position: relative;
   background-color: white;
-  box-shadow: 0px 0px 10px rgb(100, 100, 100);
   margin: 5px;
 }
 .home__main__section__article .item-box {
   display: flex;
   flex-direction: column;
+}
+.home__main__section__article .item-box i:hover {
+  transform: rotate(-90deg);
 }
 
 /* Mostrar 2 artículos en tablets */
